@@ -65,6 +65,55 @@ BDD:
         Plats
         Courses
 ## Identifications
-### Utlisateur de l'application
+### Utilisateur de l'application
+#### Étape 1: Identifier les acteurs
+- Clients
+- Livreurs
+- Cuisinier
+#### Étape 2: Identifier les cas d'utilisation
+- Choisir un plat
+- Acheter un plat
+- Préparer la commande
+- Prévenir que la commande est prête à être livrer
+- Prévenir que la commande est en cours de livraison
+- Vérifier l'état de livraison
+- Confirmer la livraison
+- Confirmer la reception de la livraison
 
-# ExpressFood_OCR
+- Cuisinier
+        - Création des plats
+        - Préparation des plats
+        - Conditionnement des plats
+        - Prévenir que le plats est prêt à être livré
+
+- Livreur
+        - Récupération des plats
+        - Mise a jour du status
+        - Prise en compte d'une commande
+        - Livrer
+        - Confirmer la livraison
+
+- Client
+        - Choisir un ou des plats
+        - Payer la commande
+        - Confirmer la reception de la livraison 
+
+#### Étape 3: Relier le tout avec les relations
+- Acheter un plat -> Prévenir que la commande est prête à être livrer -> Prévenir que la commande est en cours de livraison
+- Confirmer la livraison -> Confirmer la reception de la livraison
+
+### Glossaire commun: diagramme de classes
+#### Étape 1: Identifier les noms
+- Le **client** choisi un **plat**
+- Le **programme** affiche le detail du **plat**
+- Le **client** passe la **commande**
+- Le **client** paie la **commande**
+- La **commande** est envoyé au **livreur**
+- Le **livreur** confirme la reception de la **commande**
+- Le **livreur** livre la **commande**
+- Le **client** réceptionne la **commande**
+- Le **client** confirme la reception de la **commande** au **programme**
+- Le **livreur** confirme la **livraison** de la **commande** au **programme**
+#### Étape 2: représenter les noms en tant que classes ou attributs
+
+
