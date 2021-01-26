@@ -23,7 +23,7 @@
                 - singulier
                 - sans accent
                 - commencer avec une minuscule
-                - CamelCase
+                - camelCase
 - MPD
         - Tables et attributs
                 - au singulier
