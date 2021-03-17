@@ -1,20 +1,22 @@
 # Concevez la solution technique d'une application de restauration en ligne, ExpressFood
 
-Livrer des plats de qualité en moins de 20 minutes grâce à un réseau de livreurs à vélo.
+Vous venez d'être recruté par la toute jeune startup ExpressFood. Elle ambitionne de livrer des plats de qualité à domicile en moins de 20 minutes grâce à un réseau de livreurs à vélo.
 
-2 plats 2 desserts froid
-Frais de livraison gratuits
+Chaque jour, ExpressFood prépare 2 plats et 2 desserts.
+Les frais de livraison sont gratuits.
 
-APP:
-- Propose plats desserts
-- Les plats changent chaque jour
-- Page indiquant si un livreur à pris la commande et l'estimation de livraison
+ExpressFood a besoin que vous conceviez sa base de données. Il s'agit de stocker notamment :
+- La liste des clients
+- La liste des différents plats du jour
+- La liste des livreurs, avec leur statut (libre, en cours de livraison) et leur position
+- La liste des commandes passées
+...
 
-BDD:
-- Liste des clients
-- Liste des différents plats du jour
-- Liste des livreurs, avec leur statut et leur position
-- Liste des commandes passées
+Schémas demandés :
+- Diagrammes de cas d’utilisation (création d’une commande, ajout d’un plat du jour, livraison d’une commande)
+- Modèle de données
+- Diagramme de classes
+- Diagrammes de séquences (création d’une commande, ajout d’un plat du jour, livraison d’une commande)
 
 ---
 ## Conceptions de la base de données
@@ -22,6 +24,8 @@ BDD:
 1. Identifier les acteurs
 2. Définir les cas d'utilisations
 3. Ajouter les relations
+
+![](https://github.com/NicoLarson/Express_Food_OCR/blob/main/img/Diagramme_de_cas_d_utilisations.png)
 
 [Diagrammes_de_cas_d'utilisations.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagrammes_de_cas_d_utilisations.pdf)
 ### Diagrammes des séquences
@@ -37,6 +41,7 @@ Représentation graphique de la chronologie des échanges des messages avec le s
 - Représentation **temporelle** des interactions entre les objets.
 - **Chronologie** des messages échangés entre les objets et avec les acteurs.
 
+![](https://github.com/NicoLarson/Express_Food_OCR/blob/main/img/Diagramme_de_sequences.png)
 [Diagrammes_de_séquences PDF](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagrammes_de_sequences.pdf)
 ### Diagramme de classes
 #### Modéliser le domaine fonctionnel
@@ -55,11 +60,12 @@ Représentation graphique de la chronologie des échanges des messages avec le s
 4. Créer les relations entre les tables
 5. Créer les relations correspondant aux classes d'association
 
-
+![](https://github.com/NicoLarson/Express_Food_OCR/blob/main/img/Diagramme_de_classes.png)
 [Diagramme_de_classes.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagramme_de_classes.pdf)
 ### Modèle de données
 Décrire le modèle fonctionnel à partir du diagramme de classes
 
+![](https://github.com/NicoLarson/Express_Food_OCR/blob/main/img/Modele_de_donnes.png)
 [Modèle_de_données.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Modele_de_donnees.pdf)
 
 ### Script base de données SQL
