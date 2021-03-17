@@ -1,4 +1,4 @@
-# ExpressFood
+# Concevez la solution technique d'une application de restauration en ligne, ExpressFood
 
 Livrer des plats de qualité en moins de 20 minutes grâce à un réseau de livreurs à vélo.
 
@@ -24,7 +24,7 @@ BDD:
 2. Définir les cas d'utilisations
 3. Ajouter les relations
 
-[Diagrammes_de_cas_d'utilisations.pdf]()
+[Diagrammes_de_cas_d'utilisations.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagrammes_de_cas_d_utilisations.pdf)
 ### Diagrammes des sequences
 #### Éléments du diagramme de séquence
 - Acteurs
@@ -38,7 +38,7 @@ Représentation graphique de la chronologie des échanges des messages avec le s
 - Représentation **temporelle** des interactions entre les objets.
 - **Chronologie** des messages échangés entre les objets et avec les acteurs.
 
-[Diagrammes_de_séquences PDF]()
+[Diagrammes_de_séquences PDF](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagrammes_de_sequences.pdf)
 ### Diagramme de classes
 #### Modéliser le domaine fonctionnel
 1. Commencer par une ébauche
@@ -57,11 +57,11 @@ Représentation graphique de la chronologie des échanges des messages avec le s
 5. Créer les relations correspondant aux classes d'association
 
 
-[Diagramme_de_classe.pdf]()
+[Diagramme_de_classe.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagramme_de_classes.pdf)
 ### Modèle de données
 Décrire le modèle fonctionnel à partir du diagramme de classe
 
-[Modèle_de_données.pdf]()
+[Modèle_de_données.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Modele_de_donnees.pdf)
 
 ### Script basse de données SQL
 ```sql
@@ -98,9 +98,9 @@ ENGINE = InnoDB;
 
 ```
 
-[Base_de_données.sql]()
+[Base_de_données.sql](https://github.com/NicoLarson/Express_Food_OCR/blob/main/Base_de_donnees.sql)
 
 ---
 ## Support de présentation présentation
-[Support_de_présentation.pptx]()
+[Support_de_présentation.pptx](https://github.com/NicoLarson/Express_Food_OCR/blob/main/Presentation.pptx?raw=true)
 
