@@ -17,16 +17,15 @@ BDD:
 - Liste des commandes passées
 
 ---
-## Conceptions
+## Conceptions de la base de données
 ### Diagrammes de cas d'utilisations
-#### Conception
 1. Identifier les acteurs
 2. Définir les cas d'utilisations
 3. Ajouter les relations
 
 [Diagrammes_de_cas_d'utilisations.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagrammes_de_cas_d_utilisations.pdf)
-### Diagrammes des sequences
-#### Éléments du diagramme de séquence
+### Diagrammes des séquences
+#### Éléments du diagramme de séquences
 - Acteurs
 - Objets (instances)
 - Messages (cas d'utilisation, appels d'opération)
@@ -50,20 +49,20 @@ Représentation graphique de la chronologie des échanges des messages avec le s
     - Relation avec multiplicité
 3. Compléter le modèle: Ajouter les types de données: Bool, int, string, varchar...
 4. Élaborer le modèle physique de données (MPD)
-1. Crée une table par classe, hors association
+1. Créer une table par classe, hors association
 2. Ajouter les attributs avec le type
 3. Ajouter les clés primaires
 4. Créer les relations entre les tables
 5. Créer les relations correspondant aux classes d'association
 
 
-[Diagramme_de_classe.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagramme_de_classes.pdf)
+[Diagramme_de_classes.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagramme_de_classes.pdf)
 ### Modèle de données
-Décrire le modèle fonctionnel à partir du diagramme de classe
+Décrire le modèle fonctionnel à partir du diagramme de classes
 
 [Modèle_de_données.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Modele_de_donnees.pdf)
 
-### Script basse de données SQL
+### Script base de données SQL
 ```sql
 ...
 CREATE TABLE IF NOT EXISTS `EXPRESSFOOD`.`compte` (
@@ -101,6 +100,8 @@ ENGINE = InnoDB;
 [Base_de_données.sql](https://github.com/NicoLarson/Express_Food_OCR/blob/main/Base_de_donnees.sql)
 
 ---
-## Support de présentation présentation
+## Support de présentation
 [Support_de_présentation.pptx](https://github.com/NicoLarson/Express_Food_OCR/blob/main/Presentation.pptx?raw=true)
+
+> Nicolas Yang - 2021
 
