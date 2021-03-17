@@ -10,7 +10,7 @@ ExpressFood a besoin que vous conceviez sa base de données. Il s'agit de stocke
 - La liste des différents plats du jour
 - La liste des livreurs, avec leur statut (libre, en cours de livraison) et leur position
 - La liste des commandes passées
-...
+- ...
 
 Schémas demandés :
 - Diagrammes de cas d’utilisation (création d’une commande, ajout d’un plat du jour, livraison d’une commande)
