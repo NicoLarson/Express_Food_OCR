@@ -7,7 +7,7 @@ Frais de livraison gratuits
 
 APP:
 - Propose plats desserts
-- Les plats changesnt chaque jour
+- Les plats changent chaque jour
 - Page indiquant si un livreur à pris la commande et l'estimation de livraison
 
 BDD:
@@ -16,104 +16,91 @@ BDD:
 - Liste des livreurs, avec leur statut et leur position
 - Liste des commandes passées
 
-## TODO
+---
+## Conceptions
+### Diagrammes de cas d'utilisations
+#### Conception
+1. Identifier les acteurs
+2. Définir les cas d'utilisations
+3. Ajouter les relations
 
-- [ ] UML
-- [ ] Diagrammes besoins application (cas d'utilisation)
-- [ ] Création d'une commande
-- [ ] Ajout d'un plat du jour
-    - [ ]  Livraison d'une commande
-- [ ]  Diagramme de classe (entités application)
-    - [ ] Diagramme de séquences 
-    - [ ] Création d'une commande
-    - [ ] Ajout d'un plat du jour
-    - [ ] Livraison d'une commande
-    - [ ] Schéma de BDD MySQL
-- [ ] Remplir la base (valeurs fictives)
+[Diagrammes_de_cas_d'utilisations.pdf]()
+### Diagrammes des sequences
+#### Éléments du diagramme de séquence
+- Acteurs
+- Objets (instances)
+- Messages (cas d'utilisation, appels d'opération)
 
-## UML: Analyse
-    - Acteurs:
-    - Chefs
-    - Elaboration de plats
-    - Publier les nouveaux plats
-    - Ingredient
-    - Prix
-    - Livreur
-    - Livraison de plats
-    - Afficher la position
-    - Afficher la prise de commande
-    - Confirmation de dépots de commande
-    - Client
-    - Prise de commande
-    - Paiement
-    - Pleintes
-    - Réclamation
+#### Principe de base
+Représentation graphique de la chronologie des échanges des messages avec le système ou au sein du système.
+- "Vie" de chaque entité représentée verticalement
+- Échanges de messages représentés horizontalement
+- Représentation **temporelle** des interactions entre les objets.
+- **Chronologie** des messages échangés entre les objets et avec les acteurs.
 
-### 1. Utilisateurs
-    - Livreur
-    - Client
-### 2. Converser
-    Dev: "Que souhaitez-vous pouvoir faire?"
-    Client: "Je souhaite être livrer en moins de 2O minutes un repas"
-    Dev: "Celon vous comment dois je procéder?"
-    Client: "J'ouvre l'application je vois le plats proposer, je séléctionne les plats que je veux, je confirme et je me fait livrer. Bien sur en amont j'aurai un compte avec CB et tous."
-    Dev: "Comment vous les vous être prévenu quand il sera disponible?"
-    Client: "Un appel. Et avoir la possibilité de suivre l'avancement de la livraison."
-### 3. Plus de questions
-### Languages
-    Livraison
-    Plats
-    Courses
-## Identifications
-### Utilisateur de l'application
-#### Étape 1: Identifier les acteurs
-    - Clients
-    - Livreurs
-    - Cuisinier
-#### Étape 2: Identifier les cas d'utilisation
-    - Choisir un plat
-    - Acheter un plat
-    - Préparer la commande
-    - Prévenir que la commande est prête à être livrer
-    - Prévenir que la commande est en cours de livraison
-    - Vérifier l'état de livraison
-    - Confirmer la livraison
-    - Confirmer la reception de la livraison
+[Diagrammes_de_séquences PDF]()
+### Diagramme de classes
+#### Modéliser le domaine fonctionnel
+1. Commencer par une ébauche
+    - Représentation générale
+    - Représenter que ce qui est utile
+    - Relation simple
+2. Modéliser précisément le domaine
+    - Attribut
+    - Relation avec multiplicité
+3. Compléter le modèle: Ajouter les types de données: Bool, int, string, varchar...
+4. Élaborer le modèle physique de données (MPD)
+1. Crée une table par classe, hors association
+2. Ajouter les attributs avec le type
+3. Ajouter les clés primaires
+4. Créer les relations entre les tables
+5. Créer les relations correspondant aux classes d'association
 
-    - Cuisinier
-    - Création des plats
-    - Préparation des plats
-    - Conditionnement des plats
-    - Prévenir que le plats est prêt à être livré
 
-    - Livreur
-    - Récupération des plats
-    - Mise a jour du status
-    - Prise en compte d'une commande
-    - Livrer
-    - Confirmer la livraison
+[Diagramme_de_classe.pdf]()
+### Modèle de données
+Décrire le modèle fonctionnel à partir du diagramme de classe
 
-    - Client
-    - Choisir un ou des plats
-    - Payer la commande
-    - Confirmer la reception de la livraison 
+[Modèle_de_données.pdf]()
 
-#### Étape 3: Relier le tout avec les relations
-    - Acheter un plat -> Prévenir que la commande est prête à être livrer -> Prévenir que la commande est en cours de livraison
-    - Confirmer la livraison -> Confirmer la reception de la livraison
+### Script basse de données SQL
+```sql
+...
+CREATE TABLE IF NOT EXISTS `EXPRESSFOOD`.`compte` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `type` VARCHAR(255) NOT NULL,
+  `nom` VARCHAR(255) NOT NULL,
+  `mdp` VARCHAR(255) NOT NULL,
+  `mail` VARCHAR(255) NOT NULL,
+  `tel` VARCHAR(20) NOT NULL,
+  `statut` VARCHAR(255) NULL,
+  `position` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
 
-### Glossaire commun: diagramme de classes
-#### Étape 1: Identifier les noms
-    - Le **client** choisi un **plat**
-    - Le **programme** affiche le detail du **plat**
-    - Le **client** passe la **commande**
-    - Le **client** paie la **commande**
-    - La **commande** est envoyé au **livreur**
-    - Le **livreur** confirme la reception de la **commande**
-    - Le **livreur** livre la **commande**
-    - Le **client** réceptionne la **commande**
-    - Le **client** confirme la reception de la **commande** au **programme**
-    - Le **livreur** confirme la **livraison** de la **commande** au **programme**
-#### Étape 2: représenter les noms en tant que classes ou attributs
+CREATE TABLE IF NOT EXISTS `EXPRESSFOOD`.`commande` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `date_creation` DATETIME NOT NULL,
+  `date_paiement` DATETIME NULL,
+  `date_livraison` DATETIME NULL,
+  `statut_livraison` VARCHAR(255) NULL,
+  `prix` INT NOT NULL,
+  `client_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_commande_compte1_idx` (`client_id` ASC) VISIBLE,
+  CONSTRAINT `fk_commande_compte1`
+    FOREIGN KEY (`client_id`)
+    REFERENCES `EXPRESSFOOD`.`compte` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+...
 
+```
+
+[Base_de_données.sql]()
+
+---
+## Support de présentation présentation
+[Support_de_présentation.pptx]()
 
