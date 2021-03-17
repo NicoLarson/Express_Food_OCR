@@ -19,8 +19,8 @@ Schémas demandés :
 - Diagrammes de séquences (création d’une commande, ajout d’un plat du jour, livraison d’une commande)
 
 ---
-## Conceptions de la base de données
-### Diagrammes de cas d'utilisations
+# Conceptions de la base de données
+## Diagrammes de cas d'utilisations
 1. Identifier les acteurs
 2. Définir les cas d'utilisations
 3. Ajouter les relations
@@ -28,13 +28,13 @@ Schémas demandés :
 ![](https://github.com/NicoLarson/Express_Food_OCR/blob/main/img/Diagramme_de_cas_d_utilisations.png)
 
 [Diagrammes_de_cas_d'utilisations.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagrammes_de_cas_d_utilisations.pdf)
-### Diagrammes des séquences
-#### Éléments du diagramme de séquences
+## Diagrammes des séquences
+### Éléments du diagramme de séquences
 - Acteurs
 - Objets (instances)
 - Messages (cas d'utilisation, appels d'opération)
 
-#### Principe de base
+### Principe de base
 Représentation graphique de la chronologie des échanges des messages avec le système ou au sein du système.
 - "Vie" de chaque entité représentée verticalement
 - Échanges de messages représentés horizontalement
@@ -43,8 +43,8 @@ Représentation graphique de la chronologie des échanges des messages avec le s
 
 ![](https://github.com/NicoLarson/Express_Food_OCR/blob/main/img/Diagramme_de_sequences.png)
 [Diagrammes_de_séquences PDF](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagrammes_de_sequences.pdf)
-### Diagramme de classes
-#### Modéliser le domaine fonctionnel
+## Diagramme de classes
+### Modéliser le domaine fonctionnel
 1. Commencer par une ébauche
     - Représentation générale
     - Représenter que ce qui est utile
@@ -62,13 +62,13 @@ Représentation graphique de la chronologie des échanges des messages avec le s
 
 ![](https://github.com/NicoLarson/Express_Food_OCR/blob/main/img/Diagramme_de_classes.png)
 [Diagramme_de_classes.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Diagramme_de_classes.pdf)
-### Modèle de données
+## Modèle de données
 Décrire le modèle fonctionnel à partir du diagramme de classes
 
 ![](https://github.com/NicoLarson/Express_Food_OCR/blob/main/img/Modele_de_donnes.png)
 [Modèle_de_données.pdf](https://github.com/NicoLarson/Express_Food_OCR/blob/main/pdf/Modele_de_donnees.pdf)
 
-### Script base de données SQL
+## Script base de données SQL
 ```sql
 ...
 CREATE TABLE IF NOT EXISTS `EXPRESSFOOD`.`compte` (
@@ -105,7 +105,6 @@ ENGINE = InnoDB;
 
 [Base_de_données.sql](https://github.com/NicoLarson/Express_Food_OCR/blob/main/Base_de_donnees.sql)
 
----
 ## Support de présentation
 [Support_de_présentation.pptx](https://github.com/NicoLarson/Express_Food_OCR/blob/main/Presentation.pptx?raw=true)
 
